@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/resume.css' %}">
+</head>
+<body>
+    <img src="{{ data.profile.url }}" alt="">
+    <p>{{ data.first_name}} <span>{{ data.last_name }}</span></p>
+    <p>{{ data.email}}</p>
+    <p>{{ data.phone }}</p>
+    <p>{{ data.address}}</p>
+    <p>{{ data.pin_code }}</p>
+    <p>{{ data.nationality}}</p>
+    <p>{{ data.linkedin }}</p>
+    <a href="{% url 'edit' %}">edit</a>
+</body>
+</html>

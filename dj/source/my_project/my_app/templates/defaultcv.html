@@ -1,0 +1,35 @@
+{% load widget_tweaks %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/defaultcv.css' %}">
+</head>
+<body>
+    <div class="persional_details">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% render_field form.profile class="profile" %}<br>
+        <label for="">first name</label>
+        {% render_field form.first_name placeholder="first name" %} <br>
+        <label for="">last name</label>
+        {% render_field form.last_name placeholder="last name" %}<br>
+        <label for="">Email address </label>
+        {% render_field form.email placeholder="Email" %}<br>
+        <label for="">phone Number</label>
+        {% render_field form.phone placeholder="phone Number" %}<br>
+        <label for="">Address</label>
+        {% render_field form.address placeholder="Address" %}<br>
+        <label for="">Pin code</label>
+        {% render_field form.pin_code placeholder="Pin code" %}<br>
+        <label for="">nationality</label>
+        {% render_field form.nationality placeholder="Nationality" %}<br>
+        <label for="">linkedin link</label>
+        {% render_field form.linkedin placeholder="Linkedin link"%}<br>
+        <p><button type="submit" value="create">create</button></p>
+    </form>
+</body>
+</html>
